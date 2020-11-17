@@ -3,6 +3,7 @@ const { merge } = require('webpack-merge');
 
 const config = {
   mode: 'production',
+  target: ['web', 'es5'],
 
   devtool: false,
 
