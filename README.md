@@ -1,4 +1,9 @@
 # Awesome-react-typescript-boilerplate
+
+## Install:
+### 1. ```npm i -D``` for istall all dependencies
+### 2. Have fun!
+
 ## Scripts:
 ### 1. ```npm run build``` for production build
 ### 2. ```npm run build:analyze``` for analyze bundle
