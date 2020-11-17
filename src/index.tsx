@@ -8,7 +8,4 @@ const root = (
   </React.StrictMode>
 );
 
-ReactDOM.render(
-  root,
-  document.getElementById('root')
-);
+ReactDOM.render(root, document.getElementById('root'));
