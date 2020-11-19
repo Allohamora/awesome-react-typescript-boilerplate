@@ -11,3 +11,5 @@
 ### 4. ```npm run test``` for test
 ### 5. ```npm run lint``` for linter
 ### 6. ```npm run lint:fix``` for linter with fix option
+### 7. ```npm run storybook``` for run storybook
+### 8. ```npm run build-storybook``` for build storybook to static files
