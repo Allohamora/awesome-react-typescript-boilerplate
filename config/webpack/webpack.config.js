@@ -1,6 +1,7 @@
 const path = require('path');
 
-const { build, src, public, tsconfig } = require('../paths');
+const { build, src, public, tsconfig, postcss, nodeModules } = require('../paths');
+const { isProduction } = require('../utils');
 
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -51,6 +52,40 @@ module.exports = {
         test: [/\.tsx?$/],
         exclude: [/node_modules/, /__tests__/],
         use: ['ts-loader']
+      },
+      {
+        test: /\.(scss|sass|css)$/,
+        use: [
+          {
+            loader: 'style-loader',
+            options: {
+              injectType: isProduction ? 'singletonStyleTag' : 'styleTag' 
+            }
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              // sass, postcss
+              importLoaders: 2,
+            }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              config: {
+                path: postcss,
+              }
+            }
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sassOptions: {
+                includePaths: [src]
+              }
+            }
+          }
+        ]
       },
       {
         test: /\.(?:ico|gif|png|jpg|jpeg)$/i, 

@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { App } from 'App';
+// first => load global styles
+import 'styles/global.scss';
+// then => components style
+import App from 'App';
 
 const root = (
   <React.StrictMode>

@@ -1,3 +1,8 @@
 import React from 'react';
+import './App.scss';
 
-export const App: React.FC = () => <div>App.</div>;
+const App: React.FC = () => <div className="app">App.</div>;
+
+export const helper = () => {};
+
+export default App;
