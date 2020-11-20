@@ -1,6 +1,6 @@
 const path = require('path');
 
-const { build, src, public, tsconfig, postcss, nodeModules } = require('../paths');
+const { build, src, public, tsconfig, postcss } = require('../paths');
 const { isProduction } = require('../utils');
 
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -24,6 +24,7 @@ module.exports = {
     // clear build dir
     new CleanWebpackPlugin(),
 
+    // create index.html from template
     new HtmlWebpackPlugin({
       template: path.join(public, 'index.html'),
       filename: 'index.html'
@@ -56,12 +57,14 @@ module.exports = {
       {
         test: /\.(scss|sass|css)$/,
         use: [
+          // load css as <style></style>
           {
             loader: 'style-loader',
             options: {
               injectType: isProduction ? 'singletonStyleTag' : 'styleTag' 
             }
           },
+          // bild css imports
           {
             loader: 'css-loader',
             options: {
@@ -69,6 +72,7 @@ module.exports = {
               importLoaders: 2,
             }
           },
+          // postprocess css
           {
             loader: 'postcss-loader',
             options: {
@@ -77,6 +81,7 @@ module.exports = {
               }
             }
           },
+          // generate css from scss
           {
             loader: 'sass-loader',
             options: {

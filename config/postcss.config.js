@@ -1,20 +1,20 @@
 const { package } = require('./paths');
 const { browserslist } = require(package);
+const { isProduction } = require('./utils');
 
 const postCssPresetEnv = require('postcss-preset-env');
 const cssNano = require('cssnano');
 
-const isProduction = process.env.NODE_ENV === 'production';
-
-const productionPlugins = [
-  cssNano(),
-  postCssPresetEnv({ browsers: browserslist.production })
+const plugins = [
+  postCssPresetEnv({ browsers: browserslist })
 ];
 
-const developmentPlugins = [
-  postCssPresetEnv({ browsers: browserslist.development })
-];
+if( isProduction ) {
+  plugins.push(
+    cssNano(),
+  )
+};
 
 module.exports = {  
-  plugins: isProduction ? productionPlugins : developmentPlugins,
+  plugins,
 };

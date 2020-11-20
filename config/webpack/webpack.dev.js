@@ -4,15 +4,10 @@ const { merge } = require('webpack-merge');
 const { build } = require('../paths');
 
 const config = {
-  // webpack mode 
   mode: 'development',
 
-  // overload output
-  output: {
-    path: build,
-    filename: '[name].bundle.js',
-    publicPath: '/',
-  },
+  // webpack-dev-server have bug with target 'browserslist'
+  target: 'web',
 
   // source map type
   devtool: 'inline-source-map',
