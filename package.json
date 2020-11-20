@@ -1,6 +1,6 @@
 {
   "name": "awesome-react-typescript-boilerplate",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "react typescript boilerplate with awesome features",
   "main": "./src/index.tsx",
   "private": true,
@@ -54,6 +54,7 @@
     "lint-staged": "^10.5.1",
     "node-sass": "^5.0.0",
     "postcss-preset-env": "^6.7.0",
+    "postcss-pxtorem": "^5.1.1",
     "prettier": "^2.1.2",
     "sass-loader": "^10.1.0",
     "style-loader": "^2.0.0",
