@@ -1,6 +1,6 @@
 {
   "name": "awesome-react-typescript-boilerplate",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "description": "react typescript boilerplate with awesome features",
   "main": "./src/index.tsx",
   "private": true,
@@ -9,9 +9,9 @@
     "build": "cross-env NODE_ENV=production webpack --config config/webpack/webpack.prod.js",
     "build:analyze": "npm run build -- --analyze",
     "test": "jest --config config/jest.config.js",
-    "lint": "eslint --config config/.eslintrc src",
-    "lint:css": "stylelint \"**/*.scss\" --config config/.stylelintrc.json",
-    "lint:fix": "npm run lint -- --fix && npm run lint:css -- --fix",
+    "lint": "eslint --config config/.eslintrc",
+    "lint:css": "stylelint --config config/.stylelintrc.json",
+    "lint:fix": "npm run lint src -- --fix && npm run lint:css \"**/*.scss\" -- --fix",
     "storybook": "start-storybook -p 6006 -c config/.storybook",
     "build-storybook": "build-storybook -c config/.storybook"
   },
