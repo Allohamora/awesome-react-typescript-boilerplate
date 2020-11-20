@@ -1,7 +1,9 @@
 const baseConfig = require('./webpack.config');
-const webpack = require('webpack');
-const { merge } = require('webpack-merge');
 const { build } = require('../paths');
+
+const webpack = require('webpack');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+const { merge } = require('webpack-merge');
 
 const config = {
   mode: 'development',
@@ -25,6 +27,7 @@ const config = {
   plugins: [
     // hot update 
     new webpack.HotModuleReplacementPlugin(),
+    new ReactRefreshWebpackPlugin()
   ]
 };
 
