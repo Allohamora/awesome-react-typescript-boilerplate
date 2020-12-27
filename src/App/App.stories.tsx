@@ -7,5 +7,7 @@ export default {
   component: App,
 } as Meta;
 
-export const Default: Story = () => <App />;
+const Template: Story = () => <App />;
+
+export const Default = Template.bind({});
 Default.args = {};

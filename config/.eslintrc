@@ -44,6 +44,9 @@
     "@typescript-eslint/no-empty-interface": 1,
     "@typescript-eslint/explicit-module-boundary-types": 0,
 
+    // disable re-export *
+    "import/export": 0,
+
     // remove typescript-eslint style fix
     "@typescript-eslint/indent": 0, 
     "@typescript-eslint/comma-dangle": 0,
@@ -66,7 +69,7 @@
         "trailingComma": "all",
         "jsxBracketSameLine": false,
         "singleQuote": true,
-        "printWidth": 70
+        "printWidth": 60
       }
     ],
 

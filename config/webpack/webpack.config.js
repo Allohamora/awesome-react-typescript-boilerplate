@@ -97,11 +97,26 @@ module.exports = {
         test: /\.(?:ico|gif|png|jpg|jpeg)$/i, 
         type: 'asset/resource'
       },
-
       {
-        test: /\.(woff(2)?|eot|ttf|otf|svg|)$/, 
+        test: /\.(woff(2)?|eot|ttf|otf)$/, 
         type: 'asset/inline'
       },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: '@svgr/webpack',
+            options: {
+              svgoConfig: {
+                plugins: {
+                  removeViewBox: false
+                }
+              }
+            }
+          }, 
+          'url-loader'
+        ]
+      }
     ]
   },
 
