@@ -1,7 +1,9 @@
 $mobile: 550px;
 
-@mixin media ($media) {
+@mixin media($media) {
   @if $media == mobile {
-    @media (max-width: $mobile) { @content; }
+    @media (max-width: $mobile) {
+      @content;
+    }
   }
 }

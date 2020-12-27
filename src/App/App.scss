@@ -1,11 +1,12 @@
-@import "styles/vars";
-@import "styles/media";
+@import 'styles/vars';
+@import 'styles/media';
 
 .App {
-  color: $primary;
   display: flex;
-  font-size: 16px;
   justify-content: center;
+
+  color: $primary;
+  font-size: 16px;
 
   @include media(mobile) {
     font-size: 14px;
