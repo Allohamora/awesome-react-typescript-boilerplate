@@ -4,7 +4,8 @@ const theme = {
   ROOT_FS,
 
   palette: {
-    red: 'red',
+    blue: '#34495e',
+    white: '#FFFFFF',
   },
 
   pxToRem: (px: number): string => `${px / ROOT_FS}rem`,

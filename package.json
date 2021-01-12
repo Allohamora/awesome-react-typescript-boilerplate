@@ -1,6 +1,6 @@
 {
   "name": "awesome-react-typescript-boilerplate",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "react typescript boilerplate with awesome features",
   "main": "./src/index.tsx",
   "private": true,

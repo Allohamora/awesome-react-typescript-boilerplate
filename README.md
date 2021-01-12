@@ -1,4 +1,4 @@
-# Awesome-react-typescript-boilerplate
+# Awesome React Typescript Boilerplate
 
 ## Install:
 ### 1. ```npm i -D``` for install all dependencies
@@ -6,7 +6,7 @@
 
 ## Features:
 ### 1. configured stylelint, eslint, jest, storybook, typescript
-### 2. css, scss, css-modules support
+### 2. css(*.css), scss(*.scss, *.module.scss), css-modules(*.module.css) support
 ### 3. lint and test git commit hook
 ### 4. easy override (just change values in ./config)
 

@@ -10,6 +10,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
+const outputImagesDir = 'assets/images';
+
 module.exports = {
   // entry file
   entry: [
@@ -92,7 +94,10 @@ module.exports = {
       },
       {
         test: /\.(?:ico|gif|png|jpg|jpeg)$/i, 
-        type: 'asset/resource'
+        type: 'asset/resource',
+        generator: {
+          filename: isProduction ? `${outputImagesDir}/[hash][ext][query]` : `${outputImagesDir}/[name][ext][query]`
+        }
       },
       {
         test: /\.(woff(2)?|eot|ttf|otf)$/, 
