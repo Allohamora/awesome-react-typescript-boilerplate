@@ -1,8 +1,6 @@
-/* eslint-disable */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'styles/global.scss'; // first: load global styles
-import App from 'App'; // second: load app with app styles
+import App from 'App';
 
 const root = (
   <React.StrictMode>

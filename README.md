@@ -4,6 +4,12 @@
 ### 1. ```npm i -D``` for install all dependencies
 ### 2. Have fun!
 
+## Features:
+### 1. configured stylelint, eslint, jest, storybook, typescript
+### 2. css, scss, css-modules support
+### 3. lint and test git commit hook
+### 4. easy override (just change values in ./config)
+
 ## Scripts:
 ### 1. ```npm run build``` for production build
 ### 2. ```npm run build:analyze``` for analyze bundle

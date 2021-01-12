@@ -1,6 +1,13 @@
 import React from 'react';
-import './App.scss';
+import Button from 'components/Button';
+import AppProvider from './AppProvider';
+import { Block } from './style';
 
-const App: React.FC = () => <div className="App">App</div>;
+const App: React.FC = () => (
+  <AppProvider>
+    <Block>App</Block>
+    <Button>123</Button>
+  </AppProvider>
+);
 
 export default App;
