@@ -6,7 +6,7 @@
 
 ## Features:
  * configured stylelint, eslint, jest, storybook, typescript
- * css(*.css), scss(*.scss, *.module.scss), css-modules(*.module.css) support
+ * css(\*.css), scss(\*.scss, \*.module.scss), css-modules(\*.module.css) support
  * lint and test git commit hook
  * easy override (just change values in ./config)
 
