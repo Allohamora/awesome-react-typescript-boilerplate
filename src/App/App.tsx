@@ -1,7 +1,7 @@
 import React from 'react';
 import AppProvider from './AppProvider';
-import logo from 'assets/img/logo.png';
-import { Block, Logo, Title } from './style';
+import logo from './img/logo.png';
+import { Block, Logo, Title } from './styles';
 
 const App: React.FC = () => (
   <AppProvider>
