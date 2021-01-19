@@ -101,8 +101,11 @@ module.exports = {
         options: {
           outputPath: outputImagesDir,
           name: isProduction ? '[contenthash].[ext]' : '[name].[ext]',
+          inline: {
+            limit: 0
+          },
           compress: {
-            mode: 'high', // 'lossless', 'low'
+            mode: 'low', // 'lossless', 'high'
             webp: true,
             disableOnDevelopment: true,
           }
