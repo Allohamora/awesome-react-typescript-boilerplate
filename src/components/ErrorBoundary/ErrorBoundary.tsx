@@ -9,7 +9,6 @@ export default class ErrorBoundary extends React.Component<
   Record<string, unknown>,
   State
 > {
-  // eslint-disable-next-line react/state-in-constructor
   public state: State = { error: null, errorInfo: null };
 
   componentDidCatch(
